@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-class Ar
+public class Ar
 {
     private int n;
     private int[] a;    //////// Це оголошення класу Ar який містить закриті поля
@@ -51,14 +51,14 @@ class Ar
     }
     public Ar(string fileName)   //// 2 конструктор
     {
-            string[] lns = File.ReadAllLines(fileName);
-            n = lns[0].Split(',').Length;
-            a = new int[n];
-            string[] nums = lns[0].Split(',');
-            for (int i = 0; i < n; i++)
-            {
-                a[i] = int.Parse(nums[i]); /////заповнюе масив
-            }
+        string[] lns = File.ReadAllLines(fileName);
+        n = lns[0].Split(',').Length;
+        a = new int[n];
+        string[] nums = lns[0].Split(',');
+        for (int i = 0; i < n; i++)
+        {
+            a[i] = int.Parse(nums[i]); /////заповнюе масив
+        }
     }
 
     public void Print()    ////Метод Print (без параметрів), що виводить масив на екран;
